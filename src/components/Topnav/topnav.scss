@@ -1,0 +1,101 @@
+.Nav_container {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background: #ffffff;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+
+  .Nav_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 4%;
+
+    .input_wrapper {
+      display: flex;
+      align-items: center;
+      box-sizing: border-box;
+      width: 400px;
+      height: 40px;
+      background: #ffffff;
+      //   opacity: 0.2;
+      border: none;
+      border-radius: 8px;
+
+      & input {
+        width: 85%;
+        height: 100%;
+        border: 1px solid #213f7d;
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+        padding-inline-start: 10%;
+
+        &::placeholder {
+          font-size: 14px;
+          color: #545f7d;
+        }
+        &:focus {
+          outline: #213f7d;
+        }
+      }
+
+      & button {
+        width: 15%;
+        height: 100%;
+        background-color: #39cdcc;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        border: 1px solid #39cdcc;
+        cursor: pointer;
+
+        & svg {
+          color: #ffffff;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .doc_container {
+      display: flex;
+      align-items: center;
+      gap: 5rem;
+
+      .docs {
+        font-family: "Roboto";
+        font-size: 16px;
+        color: #213f7d;
+      }
+      .alert{
+        font-size: 1.5rem;
+        color: #213F7D;
+      }
+
+      .account_holder {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .user_img{
+            border-radius: 100px;
+        }
+
+        .name_flex {
+          display: flex;
+          align-items: center;
+          gap: .7rem;
+
+        & p{
+            color: #213F7D;
+        }
+        & svg{
+            color: #213f7d;
+        }
+        }
+      }
+    }
+  }
+}

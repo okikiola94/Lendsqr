@@ -1,0 +1,146 @@
+.Login_Container {
+  display: flex;
+  // align-items: center;
+  justify-content: space-between;
+  height: 100vh;
+  width: 100vw;
+  background-color: #e5e5e5;
+
+  .img_wrapper {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10rem;
+
+    .logo_img{
+      padding-block-start: 5%;
+      padding-inline-start: 5%;
+    }
+
+    .img_container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+      padding-block-start: 10%;
+      padding-inline-start: 5%;
+    }
+  }
+
+  .signin_flex {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: #fff;
+
+    .signin_wrap{
+      padding-block-start: 20%;
+
+    }
+
+    .welcome {
+      font-family: "Avenir Next";
+      font-weight: 700;
+      font-size: 40px;
+      color: #213f7d;
+    }
+
+    .enter-details {
+      font-family: "Avenir Next";
+      font-size: 20px;
+      color: #545f7d;
+    }
+
+    .login_form {
+      width: 447px;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+
+      .input {
+        width: 427px;
+        height: 50px;
+        border: 2px solid rgba(84, 95, 125, 0.15);
+        border-radius: 5px;
+        padding-left: 20px;
+
+        &:focus {
+          outline: #213f7d;
+        }
+
+        &::placeholder {
+          font-family: "Avenir Next";
+          font-size: 14px;
+          color: #545f7d;
+          opacity: 0.6;
+        }
+      }
+      .password_input_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 50px;
+        border: 2px solid rgba(84, 95, 125, 0.15);
+        border-radius: 5px;
+
+        .input-input-password {
+          border: none;
+          width: 90%;
+          height: 100%;
+          border-radius: 5px;
+          padding-left: 20px;
+
+          &::placeholder {
+            font-family: "Avenir Next";
+            font-size: 14px;
+            color: #545f7d;
+            opacity: 0.6;
+          }
+
+          &:focus {
+            outline: none;
+          }
+        }
+
+        & button {
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+
+          & p {
+            font-family: "Avenir Next";
+            font-weight: 600;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            color: #39cdcc;
+          }
+        }
+      }
+      .password_forget {
+        font-family: "Avenir Next";
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        color: #39cdcc;
+      }
+
+      .btn{
+        height: 48px;
+        border: 1px solid #39cdcc;
+        border-radius: 8px;
+        background-color: #39cdcc;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 600;
+        font-family: "Avenir Next";
+
+      }
+    }
+  }
+}
