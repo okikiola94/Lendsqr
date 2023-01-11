@@ -1,39 +1,42 @@
-.PopUp{
-    width: 220px;
-    height: 220px;
-    background-color: #ffffff;
-    border: #f0f4f4 2px solid;
-    box-shadow:  1px 3px 15px 5px #f0f4f4 inset;
-     position: absolute;
-    top: 50%;
-    right: 20%;
+@use "../../scss/global/colors" as colors;
+@use "../../scss/utils/functions" as fn;
+
+.PopUp {
+  width: 220px;
+  height: 220px;
+  background-color: #ffffff;
+  border: #f0f4f4 2px solid;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  position: absolute;
+  right: 20%;
+  cursor: pointer;
+
+  .PopUpClosebtn {
+    font-size: 30px;
+    right: 5%;
+    top: 2%;
+    position: absolute;
+    color: #000;
     cursor: pointer;
+  }
 
-    .closebtn{
-        font-size: 30px;
-        right: 5%;
-        position: absolute;
-        color:#000;
-        cursor: pointer;
+  .PopUPKebabMmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+    .PopUplistItem {
+        display: flex;
+        align-items: center;
+        gap: fn.rem(10);
+      list-style: none;
+      margin: 10%;
+      font-size: fn.rem(16);
+
+      &:hover{
+        color: colors.$mint;
+      }
     }
-    
-    .KEBAB-menu{
-        margin: 15%;
-        display:flex;
-        flex-direction:column;
-        
-
-
-        .vIWV-USER-side li{
-            list-style: none;
-            cursor: pointer;
-            margin: 15%;
-            }
-    }
-    
-    
-    
-    
+  }
 }
-
-
