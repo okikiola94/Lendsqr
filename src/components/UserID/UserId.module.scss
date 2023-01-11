@@ -1,0 +1,234 @@
+@use "../../scss/global/colors" as colors;
+@use "../../scss/utils/functions" as fn;
+
+.UserId {
+  .UserIdRedirect {
+    font-size: fn.rem(16);
+    color: colors.$gray-alt;
+    font-weight: fn.rem(500);
+    cursor: pointer;
+  }
+
+  .UserIdTitleFlex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .UserIdTitle {
+      color: colors.$blue;
+      font-size: fn.rem(24);
+      font-weight: fn.rem(500);
+    }
+
+    .UserIdActionSpan {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+
+      .UserIdActionBlacklistButton {
+        color: colors.$red;
+        border: 1px solid colors.$red;
+        background-color: transparent;
+        border-radius: fn.rem(8);
+        font-size: fn.rem(14);
+        letter-spacing: 0.1em;
+        padding: fn.rem(14);
+        cursor: pointer;
+      }
+      .UserIdActionActivateButton {
+        color: colors.$green;
+        border: 1px solid colors.$green;
+        background-color: transparent;
+        border-radius: fn.rem(8);
+        font-size: fn.rem(14);
+        letter-spacing: 0.1em;
+        padding: fn.rem(14);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .UserIdCard {
+    background-color: colors.$base-bg;
+    border: 1px solid colors.$border;
+    box-shadow: 3px 5px 20px colors.$gray-bg;
+    border-radius: fn.rem(4);
+    margin-block: fn.rem(32);
+
+    .UserIdCardContent {
+      display: flex;
+      align-items: center;
+      gap: fn.rem(48);
+      margin: fn.rem(32);
+
+      .UserIdAvatar {
+        display: flex;
+        align-items: center;
+        width: fn.rem(80);
+        height: fn.rem(80);
+        border: 1px solid colors.$blue;
+        background-color: colors.$gray-bg;
+        border-radius: fn.rem(50);
+
+        .UserIdAvatarIcon {
+          margin-inline-start: fn.rem(30);
+        }
+      }
+
+      .UserIdIdentityWrap {
+        display: flex;
+        flex-direction: column;
+
+        .UserIdName {
+          font-size: fn.rem(22);
+          columns: colors.$blue;
+          font-weight: fn.rem(500);
+        }
+
+        .UserIdId {
+          font-size: fn.rem(12);
+          text-transform: uppercase;
+        }
+      }
+
+      .UserIdLine {
+        height: fn.rem(100);
+        width: fn.rem(1);
+        padding-left: fn.rem(1);
+        border: 1px solid colors.$gray-bg;
+        background-color: colors.$gray-bg;
+      }
+      .UserIdTierContainer {
+        display: flex;
+        flex-direction: column;
+
+        .UserIdTier {
+          font-size: fn.rem(14);
+          color: colors.$gray;
+        }
+
+        .UserIdTierRating {
+          color: colors.$yellow;
+          font-size: fn.rem(18);
+        }
+      }
+
+      .UserIdandInfo {
+        display: flex;
+        flex-direction: column;
+
+        .UserIdandBalance {
+          color: colors.$blue;
+          font-size: fn.rem(22);
+          font-weight: fn.rem(500);
+        }
+        .UserIdandAcct {
+          color: colors.$blue;
+          font-size: fn.rem(12);
+        }
+      }
+    }
+
+    .UserIdSubHeading {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      margin-inline: fn.rem(32);
+
+      .UserIdHeading{
+        font-size: fn.rem(16);
+        color: colors.$user-title;
+        font-family:'SF Compact Text';
+        cursor: pointer;
+
+        &:hover{
+            color: colors.$mint;
+            padding-bottom: fn.rem(5);
+            border-bottom: 1px solid colors.$mint;
+        }
+      }
+
+      #UserIdHeadingUnderline{
+        color: colors.$mint;
+        padding-bottom: fn.rem(5);
+        border-bottom: 1px solid colors.$mint;
+      }
+    }
+  }
+
+  .UserIdInformation{
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$base-bg;
+    border: 1px solid colors.$border;
+    box-shadow: 3px 5px 20px colors.$gray-bg;
+    border-radius: fn.rem(4);
+
+    .UserIdInformationContent{
+        margin: fn.rem(48);
+        display: flex;
+        flex-direction: column;
+        gap: fn.rem(32);
+
+        .UserIdPersonalInfo{
+            .UserIdPersonalInfoHead{
+                font-size: fn.rem(16);
+                color: colors.$blue;
+            }
+
+            .UserIdPersonalInfoContent{
+                display: grid;
+                grid-template-columns: repeat(5, 2fr);
+
+                .UserIdInfoLabel{
+                    font-size: fn.rem(12);
+                    text-transform: uppercase;
+                    color: colors.$gray;
+                }
+
+                .UserIdInfoInput{
+                    font-size: fn.rem(16);
+                    color: colors.$gray;
+
+                }
+            }
+        }
+
+        
+
+        .UserIdHorizontalLine{
+            height: fn.rem(2);
+            width: 100%;
+            padding-bottom: fn.rem(1);
+            border: 1px solid colors.$gray-bg;
+            background-color: colors.$gray-bg;  
+        }
+
+        .UserIdPersonalInfo2{
+            .UserIdPersonalInfoHead{
+                font-size: fn.rem(16);
+                color: colors.$blue;
+            }
+
+            .UserIdPersonalInfoContent{
+                display: grid;
+                grid-template-columns: repeat(4, 2fr);
+
+                .UserIdInfoLabel{
+                    font-size: fn.rem(12);
+                    text-transform: uppercase;
+                    color: colors.$gray;
+                }
+
+                .UserIdInfoInput{
+                    font-size: fn.rem(16);
+                    color: colors.$gray;
+
+                }
+            }
+
+        }
+    }
+
+  }
+}

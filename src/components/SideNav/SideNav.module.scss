@@ -1,0 +1,81 @@
+@use '../../scss/global/colors' as colors;
+@use '../../scss/utils/functions' as fn;
+
+.sideNav_container {
+  width: 25%;
+  background: colors.$base-bg;
+  // background-color: colors.$green;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  min-height: 90vh;
+  overflow-y: scroll;
+  z-index: 1;
+
+  .Side_Nav_wrapper {
+    cursor: pointer;
+    width: 100%;
+    padding-block: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    // overflow: auto;
+    // Hide scrollbar for IE, Edge and Firefox
+    // -ms-overflow-style: none; // IE and Edge
+    // scrollbar-width: none; //Firefox
+
+    /* width */
+    &::-webkit-scrollbar {
+      display: none;
+      width: fn.rem(2);
+    }
+
+    /* Track */
+    &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 5px colors.$mint-alt;
+      border-radius: 10px;
+    }
+
+    /* Handle */
+    &::-webkit-scrollbar-thumb {
+      background: colors.$mint;
+      border-radius: 10px;
+    }
+
+    // /* Handle on hover */
+    // &::-webkit-scrollbar-thumb:hover {
+    //   background: colors.$green;
+    // }
+
+    .list_sub_header {
+      color: colors.$gray;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      padding-inline-start: 10%;
+      padding-inline-end: 10%;
+      padding-block-start: fn.rem(32);
+    }
+
+    .sideNav_list {
+      width: 100%;
+      padding-inline-start: 10%;
+      padding-inline-end: 2%;
+      border-inline-start: 0.3rem solid colors.$base-bg;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      &:hover {
+        background-color: colors.$mint-alt;
+        border-inline-start: 0.3rem solid colors.$mint;
+      }
+
+      .sideNav_list_label {
+        padding-block: fn.rem(4);
+      }
+    }
+  }
+}

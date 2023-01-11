@@ -1,33 +1,55 @@
-import "./topnav.scss";
-import Logo from "./images/lendsqr.png";
-import Img from "./images/img.png";
+// REACT DEFAULTS
+import { Link } from 'react-router-dom'
 
-import { AiFillCaretDown, AiOutlineSearch } from "react-icons/ai";
-import { IoIosNotificationsOutline } from "react-icons/io";
+// COMPONENTS
+import { AiFillCaretDown, AiOutlineSearch } from 'react-icons/ai'
+import { IoIosNotificationsOutline } from 'react-icons/io'
+
+// IMAGES
+import Logo from './images/lendsqr.png'
+import User from './images/img.png'
+
+// STYLES
+import styles from './TopNav.module.scss'
+
 const TopNav = () => {
   return (
-    <div className="Nav_container">
-        <ul className="Nav_wrapper">
-      <img src={Logo} alt="logo"/>
-      <div className="input_wrapper">
-        <input type="search" placeholder="search for anything" />
-        <button>
-          <AiOutlineSearch/>
-        </button>
+    <nav className={styles.Nav_container}>
+      <div className={styles.navBrand}>
+        <img src={Logo} alt='logo' />
       </div>
-      <div className="doc_container">
-        <a href="#" className="docs" >Docs</a>
-        <IoIosNotificationsOutline className="alert"/>
-        <div className="account_holder">
-          <img src={Img} alt="img" className="user_img"/>
-          <div className="name_flex">
-            <p>Adedeji</p>
-            <AiFillCaretDown />
+
+      <div className={styles.Nav_wrapper}>
+        <label htmlFor='search' className={styles.input_wrapper}>
+          <input
+            type='search'
+            className={styles.searchInput}
+            placeholder='search for anything'
+            id='search'
+            name='search'
+          />
+          <button className={styles.searchIconBtn}>
+            <AiOutlineSearch className={styles.searchIcon} />
+          </button>
+        </label>
+
+        <div className={styles.doc_container}>
+          <Link to={'/'} className={styles.docs}>
+            <span>Docs</span>
+          </Link>
+
+          <IoIosNotificationsOutline className={styles.notification} />
+
+          <div className={styles.account_holder}>
+            <img src={User} alt='img' className={styles.avatar} />
+            <div className={styles.name_flex}>
+              <p>Adedeji</p>
+              <AiFillCaretDown />
+            </div>
           </div>
         </div>
       </div>
-      </ul>
-    </div>
-  );
-};
-export default TopNav;
+    </nav>
+  )
+}
+export default TopNav

@@ -1,0 +1,29 @@
+@use '../../scss/global/colors' as colors;
+@use '../../scss/utils/functions' as fn;
+
+.UserInfo {
+  display: grid;
+    min-width: 900px;
+    gap: 1rem;
+    padding-right: 2rem;
+    grid-template-columns: 3fr 2fr 3fr 2fr 2fr 1fr 1fr;
+    align-items: center;
+   border-bottom: 1px solid  #dbd6d6;
+
+  & p{
+    word-break: break-all;
+    font-size: fn.rem(14);
+    width: auto;
+  }
+  .userStatus{
+    border: #dbd6d6 1px solid;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+
+
+

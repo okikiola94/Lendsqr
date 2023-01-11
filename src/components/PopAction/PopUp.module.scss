@@ -1,0 +1,39 @@
+.PopUp{
+    width: 220px;
+    height: 220px;
+    background-color: #ffffff;
+    border: #f0f4f4 2px solid;
+    box-shadow:  1px 3px 15px 5px #f0f4f4 inset;
+     position: absolute;
+    top: 50%;
+    right: 20%;
+    cursor: pointer;
+
+    .closebtn{
+        font-size: 30px;
+        right: 5%;
+        position: absolute;
+        color:#000;
+        cursor: pointer;
+    }
+    
+    .KEBAB-menu{
+        margin: 15%;
+        display:flex;
+        flex-direction:column;
+        
+
+
+        .vIWV-USER-side li{
+            list-style: none;
+            cursor: pointer;
+            margin: 15%;
+            }
+    }
+    
+    
+    
+    
+}
+
+

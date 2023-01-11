@@ -1,0 +1,107 @@
+@use '../../scss/global/colors' as colors;
+@use '../../scss/utils/fonts' as fonts;
+@use '../../scss/utils/functions' as fn;
+
+.Nav_container {
+  width: 100%;
+  background-color: colors.$base-bg;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: fn.rem(24);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+
+  .navBrand {
+    width: 22%;
+    padding-inline-start: 2%;
+  }
+
+  .Nav_wrapper {
+    width: 78%;
+    padding-inline: fn.rem(60);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .input_wrapper {
+      width: 400px;
+      height: 40px;
+      background-color: colors.$base-bg;
+      outline: none;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+
+      .searchInput {
+        width: 85%;
+        height: 100%;
+        background-color: colors.$base-bg;
+        color: colors.$gray;
+        font-size: fn.rem(14);
+        outline: none;
+        border: 1px solid colors.$blue;
+        border-bottom-left-radius: 8px;
+        border-top-left-radius: 8px;
+        text-indent: fn.rem(16);
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .searchIconBtn {
+        width: 15%;
+        height: 100%;
+        background-color: #39cdcc;
+        border-bottom-right-radius: 8px;
+        border-top-right-radius: 8px;
+        outline: none;
+        border: 1px solid colors.$mint;
+        cursor: pointer;
+
+        .searchIcon {
+          color: #ffffff;
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .doc_container {
+      display: flex;
+      align-items: center;
+      gap: fn.rem(47);
+
+      .docs {
+        font-family: fonts.$alt-font;
+        font-size: fn.rem(16);
+        color: #213f7d;
+      }
+
+      .notification {
+        font-size: 1.5rem;
+        color: #213F7D;
+      }
+
+      .account_holder {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .avatar {
+          border-radius: 100px;
+        }
+
+        .name_flex {
+          display: flex;
+          align-items: center;
+          gap: .7rem;
+          color: colors.$blue;
+        }
+      }
+    }
+  }
+}

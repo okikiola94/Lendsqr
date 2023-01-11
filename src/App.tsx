@@ -1,18 +1,27 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
-import './App.scss';
-import Login from './components/login/login';
-import Dashboard from './components/UserDashboard/dashboard';
+import React from 'react'
+import { Suspense } from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-function App() {
+// COMPONENTS
+import Loading from './components/Loading'
+import Login from './pages/Login'
+import Dashboard from './pages/Dashboard'
+import UserDetails from './pages/UserDetails'
+
+const App = () => {
   return (
-    <div className="App">
-      <Login/>
-      {/* <Routes>
-      <Route path='/' element ={<Dashboard/>}/>
-      </Routes> */}
-    </div>
-  );
+    <Suspense fallback={<Loading text='LOADING...' />}>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Login />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/loading' element={<Loading />} />
+          <Route path='/userdetails' element={<UserDetails />} />
+
+        </Routes>
+      </BrowserRouter>
+    </Suspense>
+  )
 }
 
-export default App;
+export default App

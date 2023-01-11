@@ -1,0 +1,106 @@
+@use '../../scss/global/colors' as colors;
+@use '../../scss/utils/functions' as fn;
+
+.userList {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow-y: scroll;
+
+  .dashboardTitle {
+    margin-block: 0;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .userListCards {
+    padding-block: fn.rem(40);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: fn.rem(26);
+  }
+
+  .UserInfoTable {
+    width: 100%;
+    height: fit-content;
+    padding: fn.rem(30);
+    background-color: colors.$base-bg;
+    color: colors.$gray;
+    font-size: fn.rem(14);
+    line-height: fn.rem(16);
+
+    .UserInfoHeadings {
+      width: 100%;
+
+      .UserInfoTitles {
+        display: grid;
+    min-width: 900px;
+    gap: 1rem;
+    // padding: 1rem 0;
+    padding-right: 2rem;
+    grid-template-columns: 3fr 2fr 3fr 2fr 2fr 1fr 1fr;
+    align-items: center;
+    //     width: 100%;
+    // display: grid;
+    // grid-template-columns: 3fr 2fr 3fr 2fr 2fr 1fr;
+    //     align-items: center;
+    // justify-content: flex-start;
+    // gap: 3.75rem;
+
+      }
+
+      .userBankTitle,
+      .userNameTitle,
+      .userEmail,
+      .userPhoneNumberTitle,
+      .userDateJoined,
+      .userStatus,
+      .userOptions {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        // gap: fn.rem(10);
+      }
+
+      .userBankTitle {
+        gap: fn.rem(12);
+      }
+    }
+  }
+
+  .UserPagination{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block-start: fn.rem(24);
+  }
+
+  .Pagination{
+    display: flex;
+    align-items: center;
+  }
+
+  button {
+    font-size: 14px;
+    font-weight: 600;
+    color: #545f7d;
+    background: #fff;
+    border-radius: 4px;
+    padding: 8px ;
+    margin-left: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background: #e0e0e0;
+    }
+
+    &.active {
+      color: #fff;
+      background: #6a81ae;
+    }
+  }
+}

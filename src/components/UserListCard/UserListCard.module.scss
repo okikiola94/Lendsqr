@@ -1,0 +1,38 @@
+@use '../../scss/global/colors' as colors;
+@use '../../scss/utils/functions' as fn;
+
+.userListCard {
+  width: 240px;
+  height: 160px;
+  padding-inline: fn.rem(30);
+  background: colors.$base-bg;
+  border: 1px solid rgba(33, 63, 125, 0.06);
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.04);
+  border-radius: fn.rem(4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: fn.rem(16);
+
+  .cardImg {
+    width: fn.rem(40);
+    height: fn.rem(40);
+  }
+
+  .cardTitle {
+    margin: 0;
+    font-weight: 500;
+    font-size: fn.rem(14);
+    line-height: fn.rem(16);
+    text-transform: uppercase;
+    color: colors.$gray;
+  }
+
+  .cardCaption {
+    margin: 0;
+    font-weight: 600;
+    font-size: fn.rem(24);
+    line-height: fn.rem(28);
+    color: colors.$blue;
+  }
+}
