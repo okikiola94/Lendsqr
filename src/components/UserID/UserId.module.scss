@@ -135,20 +135,20 @@
       justify-content: space-evenly;
       margin-inline: fn.rem(32);
 
-      .UserIdHeading{
+      .UserIdHeading {
         font-size: fn.rem(16);
         color: colors.$user-title;
-        font-family:'SF Compact Text';
+        font-family: "SF Compact Text";
         cursor: pointer;
 
-        &:hover{
-            color: colors.$mint;
-            padding-bottom: fn.rem(5);
-            border-bottom: 1px solid colors.$mint;
+        &:hover {
+          color: colors.$mint;
+          padding-bottom: fn.rem(5);
+          border-bottom: 1px solid colors.$mint;
         }
       }
 
-      #UserIdHeadingUnderline{
+      #UserIdHeadingUnderline {
         color: colors.$mint;
         padding-bottom: fn.rem(5);
         border-bottom: 1px solid colors.$mint;
@@ -156,7 +156,7 @@
     }
   }
 
-  .UserIdInformation{
+  .UserIdInformation {
     display: flex;
     flex-direction: column;
     background-color: colors.$base-bg;
@@ -164,71 +164,66 @@
     box-shadow: 3px 5px 20px colors.$gray-bg;
     border-radius: fn.rem(4);
 
-    .UserIdInformationContent{
-        margin: fn.rem(48);
-        display: flex;
-        flex-direction: column;
-        gap: fn.rem(32);
+    .UserIdInformationContent {
+      margin: fn.rem(48);
+      display: flex;
+      flex-direction: column;
+      gap: fn.rem(32);
 
-        .UserIdPersonalInfo{
-            .UserIdPersonalInfoHead{
-                font-size: fn.rem(16);
-                color: colors.$blue;
-            }
-
-            .UserIdPersonalInfoContent{
-                display: grid;
-                grid-template-columns: repeat(5, 2fr);
-
-                .UserIdInfoLabel{
-                    font-size: fn.rem(12);
-                    text-transform: uppercase;
-                    color: colors.$gray;
-                }
-
-                .UserIdInfoInput{
-                    font-size: fn.rem(16);
-                    color: colors.$gray;
-
-                }
-            }
+      .UserIdPersonalInfo {
+        .UserIdPersonalInfoHead {
+          font-size: fn.rem(16);
+          color: colors.$blue;
         }
 
-        
+        .UserIdPersonalInfoContent {
+          display: grid;
+          grid-template-columns: repeat(4, 2fr);
+          gap:fn.rem(18);
 
-        .UserIdHorizontalLine{
-            height: fn.rem(2);
-            width: 100%;
-            padding-bottom: fn.rem(1);
-            border: 1px solid colors.$gray-bg;
-            background-color: colors.$gray-bg;  
+          .UserIdInfoLabel {
+            font-size: fn.rem(12);
+            text-transform: uppercase;
+            color: colors.$gray;
+          }
+
+          .UserIdInfoInput {
+            font-size: fn.rem(16);
+            color: colors.$gray;
+          }
+        }
+      }
+
+      .UserIdHorizontalLine {
+        height: fn.rem(2);
+        width: 100%;
+        padding-bottom: fn.rem(1);
+        border: 1px solid colors.$gray-bg;
+        background-color: colors.$gray-bg;
+      }
+
+      .UserIdPersonalInfo2 {
+        .UserIdPersonalInfoHead {
+          font-size: fn.rem(16);
+          color: colors.$blue;
         }
 
-        .UserIdPersonalInfo2{
-            .UserIdPersonalInfoHead{
-                font-size: fn.rem(16);
-                color: colors.$blue;
-            }
+        .UserIdPersonalInfoContent {
+          display: grid;
+          grid-template-columns: repeat(4, 2fr);
 
-            .UserIdPersonalInfoContent{
-                display: grid;
-                grid-template-columns: repeat(4, 2fr);
+          .UserIdInfoLabel {
+            font-size: fn.rem(12);
+            text-transform: uppercase;
+            color: colors.$gray;
+          }
 
-                .UserIdInfoLabel{
-                    font-size: fn.rem(12);
-                    text-transform: uppercase;
-                    color: colors.$gray;
-                }
-
-                .UserIdInfoInput{
-                    font-size: fn.rem(16);
-                    color: colors.$gray;
-
-                }
-            }
-
+          .UserIdInfoInput {
+            font-size: fn.rem(16);
+            color: colors.$gray;
+          }
         }
+      }
     }
-
   }
 }

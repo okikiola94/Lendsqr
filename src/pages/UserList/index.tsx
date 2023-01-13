@@ -16,6 +16,7 @@ import Savings from '../../assets/images/CardListIcons/savings.png'
 
 // STYLES
 import styles from './UserList.module.scss'
+import { useNavigate } from "react-router-dom";
 
 
 type User = {
@@ -36,6 +37,7 @@ const UserList = () => {
   const BASE_URL = `https://6270020422c706a0ae70b72c.mockapi.io/lendsqr/api/v1/users`;
   const [itemPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
+  const navigate = useNavigate();
 
   const formatDate = (date: string | number | Date): string => {
     const newDate = new Date(date);
@@ -175,16 +177,19 @@ const UserList = () => {
         <div>
           {currentItems.map(user => {
             return (
-
-              <UserInfoRow
-                key={user.id}
+              <div  onClick={() => navigate ("/userdetails/" + user.id)}>
+              <UserInfoRow 
+                key={user.id} 
                 userBank={user.orgName}
                 userName={user.userName}
                 userEmail={user.email}
                 userPhoneNumber={user.phoneNumber}
                 userDateJoined={formatDate(user?.createdAt)}
                 userStatus={"Inactive"}
+                
+        
               />
+              </div>
 
             )
           })}

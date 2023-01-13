@@ -23,19 +23,19 @@ const DeletePopup = (props: {
         </a>
         <div className={styles.PopUPKebabMmenu}>
           <li
-            onClick={() => navigate("/userdetails")}
+            // onClick={() => navigate("/userdetails/" + user.id)}
             className={styles.PopUplistItem}
           ><BsEye/>
             View Details{" "}
           </li>
           <li
-            onClick={() => navigate("/admin/userlist")}
+            onClick={() => navigate("")}
             className={styles.PopUplistItem}
           ><BiUserX/>
             Blacklist User{" "}
           </li>
           <li
-            onClick={() => navigate("/admin/archive")}
+            onClick={() => navigate("")}
             className={styles.PopUplistItem}
           ><BiUserCheck/>
             Activate User
